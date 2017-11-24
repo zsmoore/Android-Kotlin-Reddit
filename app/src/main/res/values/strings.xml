@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Kotlin Reddit</string>
+    <string name="button_text">Click For Trending Subreddits</string>
+</resources>
