@@ -9,6 +9,7 @@ import com.zachary_moore.androidkotlinreddit.R
 import com.zachary_moore.androidkotlinreddit.databinding.SubredditCardBinding
 import com.zachary_moore.androidkotlinreddit.view.MainActivity
 import com.zachary_moore.androidkotlinreddit.view.SubredditCardViewModel
+import java.util.logging.Logger
 
 class SubredditCardViewAdapter(data: Array<String>, activity: MainActivity): RecyclerView.Adapter<SubredditCardViewAdapter.ViewHolder> (){
     class ViewHolder(v: CardView) : RecyclerView.ViewHolder(v) {
@@ -27,8 +28,8 @@ class SubredditCardViewAdapter(data: Array<String>, activity: MainActivity): Rec
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         val binding = DataBindingUtil.getBinding<SubredditCardBinding>(holder?.cardView)
-        binding.cardViewModel = SubredditCardViewModel(dataSet[position])
         binding.mainActivity = mainActivity
+        binding.cardViewModel = SubredditCardViewModel(dataSet[position])
     }
 
     override fun getItemCount(): Int {

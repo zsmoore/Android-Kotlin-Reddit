@@ -13,7 +13,7 @@
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="4dp"
     android:layout_margin="2dp"
-    android:onClick="@{(v) -> cardViewModel.onClick(mainActivity)}">
+    android:onClick="@{() -> cardViewModel.goToLink(mainActivity)}">
     
     <TextView
         android:layout_width="match_parent"
